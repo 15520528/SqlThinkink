@@ -39,9 +39,13 @@ Công cụ cơ sở dữ liệu được nhóm lại này đặc biệt phù h�
 #### 4. Transaction
 <b>Định nghĩa: </b>Transaction là một tiến trình xử lý có xác định điểm đầu và điểm cuối, được chia nhỏ thành các operation (phép thực thi) , tiến trình được thực thi một cách tuần tự và độc lập các operation đó theo nguyên tắc hoặc tất cả đều thành công hoặc một operation thất bại thì toàn bộ tiến trình thất bại. Nếu việc thực thi một operation nào đó bị fail (hỏng) đồng nghĩa với việc dữ liệu phải rollback (trở lại) trạng thái ban đầu.
 
+<b>Tại sao phải sử dụng transaction</b>
+
 <b>ACID properties trong transaction</b>
 
 <b>Atomicity :</b> mọi giao dịch chỉ thành công khi tất cả các phần thành công - All or Nothings.
+<b>Consistency :</b> trong quá trình xử lý xảy ra lỗi thì phải được hũy hoặc rollback lại các hành động nhằm đồng nhất lại cơ sở dữ liệu.
 <b>Isolation :</b> các giao dịch thực thi một cách độc lập với nhau.
+<b>Durability :</b>  Dữ liệu của transaction sau khi thực thi xong được cố định, chính thức và bền vững. Nghĩa là những thay đổi đã được cố định, không có chuyện có thể chuyển lại trạng thái dữ liệu lúc trước khi thực hiện transaction.
 
 #### 5. Connector
